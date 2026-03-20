@@ -1,3 +1,51 @@
+# ───── Dependencies ─────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
 
-# clerk configuration (can include secrets)
-/.clerk/
+# ───── Build outputs ─────────────────────────────────────
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# ───── Environment / Secrets  ← NEVER commit these ──────
+# .env.example IS safe to commit — it has no real values
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+# catch any other .env variants EXCEPT .env.example
+.env.?*
+!.env.example
+
+# ───── Clerk (keyless dev tokens — treat as secret) ─────
+.clerk/
+**/.clerk/
+
+# ───── OS / editor junk ──────────────────────────────────
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# ───── Debug / coverage ──────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage/
+.nyc_output/
+
+# ───── Vercel ────────────────────────────────────────────
+.vercel
+
+# ───── Testing ───────────────────────────────────────────
+/cypress/videos/
+/cypress/screenshots/
